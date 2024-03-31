@@ -76,6 +76,20 @@ height: 100%;
         background-color: #ff471a;
     }
 
+    @media screen  and  (max-width : 600px) {
+        .main-container{
+            width: 90%;
+        }
+
+        .emoji{
+height: 150px;
+width: 200px;
+        }
+        .btn{
+            width: 80px;
+        }
+    }
+
 </style>
 <body>
 <div class="heading">
@@ -104,7 +118,7 @@ height: 100%;
 </div>
 
     <script>
-        
+
 function happy(){
     const emojiElement = document.getElementById("emoji")
     emojiElement.src='happy.png'
