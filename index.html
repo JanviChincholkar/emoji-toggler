@@ -19,10 +19,8 @@ height: 100%;
    text-decoration: double;
     }
 
- 
     .emoji{
-        height: 250px;
-        
+        height: 250px;  
     }
 
     .img-container{
@@ -42,9 +40,8 @@ height: 100%;
     margin: 10px auto;
     width: 600px;
     text-align: center;
-   
 }
-    
+
     .btn{
         height:50px;
         width: 120px;
@@ -54,35 +51,89 @@ height: 100%;
         background-color: #ffcc00;
         color: black;
         cursor: pointer;
-
+         font-size: 20px;
     }
     .btn:hover{
         background-color: #ff751a;
         color: black;
-        box-shadow: 0px 0px 15px 1px white
-        
+        box-shadow: 0px 0px 15px 1px white;
     }
+
+    .reset{
+        background-color: green;
+        color: beige;
+        height:50px;
+        width: 120px;
+        padding: 5px 5px;
+        margin: 5px 10px;
+        border-radius: 30px;
+        cursor: pointer;
+        font-size: 25px;
+        color: black;
+    }
+    .reset:hover{
+        box-shadow: 0px 0px 15px 1px white;
+        background-color: #ff471a;
+    }
+
 </style>
 <body>
 <div class="heading">
     <h1>Emotion-Toggler</h1>
 </div>
+
 <div class="main-container">
 
     <p ><u> <h1> What is Your Current Mood ?</h1></u> </p>
+
     <div class="img-container">
-      <img src="/emoji/cool.png" class="emoji" />
+      <img src="/confused.png" class="emoji" id="emoji" />
     </div>
 
     <div class="btn-container ">
-        <button class="btn"> Happy </button>
-        <button class="btn"> In-Love </button>
-        <button class="btn"> Excited</button>
-        <button class="btn">Coolish </button>
-        <button  class="btn"> Sad</button>
+        <button class="btn" onclick="happy()"> Happy </button>
+        <button class="btn" onclick="inlove()"> In-Love </button>
+        <button class="btn" onclick="excited()"> Excited</button>
+        <button class="btn" onclick="cool()">Cool </button>
+        <button  class="btn" onclick="sad()"> Sad</button>
+    </div>
+
+    <div> 
+        <button class="reset" onclick="reset()"> Reset</button>
     </div>
 </div>
+
     <script>
+        
+function happy(){
+    const emojiElement = document.getElementById("emoji")
+    emojiElement.src='happy.png'
+}
+
+function inlove(){
+    const emojiElement = document.getElementById("emoji")
+    emojiElement.src='inlove.png'
+}
+
+function excited(){
+    const emojiElement = document.getElementById("emoji")
+    emojiElement.src='excited.png'
+}
+
+function cool(){
+    const emojiElement = document.getElementById("emoji")
+    emojiElement.src='cool.png'
+}
+
+function sad(){
+    const emojiElement = document.getElementById("emoji")
+    emojiElement.src='sad.png'
+}
+
+function reset(){
+    const emojiElement = document.getElementById("emoji")
+    emojiElement.src='confused.png'
+}
 
     </script>
 </body>
